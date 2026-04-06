@@ -1,0 +1,13 @@
+# 💰 Pure-media: Sweet Coin Wallet Architecture
+
+## 1. Monetary Logic
+- **Currency:** Sweet Coin (SC), pegged 1:1 to USD.
+- **The Founder's Cut:** A 15% invisible maintenance fee is subtracted from every transaction *at the source*.
+- **Routing:** All 15% fees are consolidated daily into: 1011102455750.
+
+## 2. Visual Design
+- **Theme:** Obsidian Black & Royal Gold.
+- **Animation:** Liquid Gold flow effect when "Sweet Coins" are transferred.
+
+## 3. Security
+- **Owner Override:** Sule Toaletu has master-key access to freeze or audit all platform liquidity.
