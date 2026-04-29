@@ -1,107 +1,117 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions, StatusBar, Image } from 'react-native';
-
-const { width, height } = Dimensions.get('window');
 
 export default function PureMediaHome() {
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle="light-content" />
-      
+    <div style={styles.container}>
       {/* Top Navigation Bar */}
-      <View style={styles.header}>
-        <Text style={styles.logoText}>PURE-MEDIA</Text>
-        <View style={styles.founderBadge}>
-           <Text style={styles.badgeEmoji}>👑</Text>
-        </View>
-      </View>
+      <div style={styles.header}>
+        <h1 style={styles.logoText}>PURE-MEDIA</h1>
+        <div style={styles.founderBadge}>
+           <span style={styles.badgeEmoji}>👑</span>
+        </div>
+      </div>
 
       {/* 4K Video Feed Placeholder */}
-      <View style={styles.videoContainer}>
-        <View style={styles.videoPlaceholder}>
-          <Text style={styles.videoText}>[ High-Bitrate 4K Stream ]</Text>
-          {/* Your Gold Diamond Logo would sit here as a watermark */}
-          <View style={styles.watermark}>
-             <Text style={styles.watermarkText}>💎</Text>
-          </View>
-        </View>
-      </View>
+      <div style={styles.videoContainer}>
+        <div style={styles.videoPlaceholder}>
+          <p style={styles.videoText}>[ High-Bitrate 4K Stream ]</p>
+          {/* Your Gold Diamond Logo watermark */}
+          <div style={styles.watermark}>
+             <span style={styles.watermarkText}>💎</span>
+          </div>
+        </div>
+      </div>
 
       {/* Monetization Overlay (The 15% Silent Split Zone) */}
-      <View style={styles.interactionBar}>
-         <View style={styles.iconColumn}>
-            <Text style={styles.iconText}>❤️</Text>
-            <Text style={styles.iconSubText}>1.2M</Text>
-         </View>
-         <View style={styles.iconColumn}>
-            <Text style={styles.iconText}>🪙</Text>
-            <Text style={styles.iconSubText}>Tip</Text>
-         </View>
-      </View>
-    </View>
+      <div style={styles.interactionBar}>
+         <div style={styles.iconColumn}>
+            <span style={styles.iconText}>❤️</span>
+            <p style={styles.iconSubText}>1.2M</p>
+         </div>
+         <div style={styles.iconColumn}>
+            <span style={styles.iconText}>🪙</span>
+            <p style={styles.iconSubText}>Tip</p>
+         </div>
+      </div>
+    </div>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
-    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    height: '100vh',
+    width: '100vw',
     backgroundColor: '#000000', // Obsidian Black
+    margin: 0,
+    overflow: 'hidden',
+    position: 'relative',
+    fontFamily: 'sans-serif',
   },
   header: {
-    height: 100,
+    height: '100px',
+    display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 40,
+    paddingTop: '20px',
   },
   logoText: {
     color: '#FFD700', // Royal Gold
-    fontSize: 22,
+    fontSize: '22px',
     fontWeight: '900',
-    letterSpacing: 5,
+    letterSpacing: '5px',
+    margin: 0,
   },
   founderBadge: {
     position: 'absolute',
-    right: 20,
-    top: 55,
+    right: '20px',
   },
   videoContainer: {
     flex: 1,
-    width: width,
-    height: height - 150,
+    width: '100%',
+    display: 'flex',
   },
   videoPlaceholder: {
     flex: 1,
+    display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#111',
+    position: 'relative',
   },
   videoText: {
     color: '#E5E4E2', // Platinum Silver
-    fontSize: 16,
+    fontSize: '16px',
   },
   watermark: {
     position: 'absolute',
-    bottom: 20,
-    left: 20,
+    bottom: '20px',
+    left: '20px',
     opacity: 0.5,
   },
   interactionBar: {
     position: 'absolute',
-    right: 15,
-    bottom: 120,
+    right: '15px',
+    bottom: '50px',
+    display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
   },
   iconColumn: {
-    marginBottom: 20,
+    marginBottom: '20px',
+    display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
   },
   iconText: {
-    fontSize: 30,
+    fontSize: '30px',
   },
   iconSubText: {
     color: '#FFD700',
-    fontSize: 12,
+    fontSize: '12px',
     fontWeight: 'bold',
+    margin: '5px 0 0 0',
   }
-});
+};
