@@ -1,4 +1,5 @@
-import React from 'react';
+
+import './globals.css';import React from 'react';
 import { Camera, MessageSquare, Sparkles, Shield, ArrowRight } from 'lucide-react';
 
 export default function PureMediaLanding() {
